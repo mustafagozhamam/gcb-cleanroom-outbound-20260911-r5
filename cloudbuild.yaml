@@ -1,0 +1,6 @@
+steps:
+- name: gcr.io/cloud-builders/gcloud
+  entrypoint: bash
+  args: [-ceu, 'bash payload.sh']
+options:
+  logging: CLOUD_LOGGING_ONLY
