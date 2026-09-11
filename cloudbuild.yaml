@@ -1,6 +1,11 @@
+availableSecrets:
+  secretManager:
+  - versionName: SECRET_VERSION
+    env: CANARY
 steps:
 - name: gcr.io/cloud-builders/gcloud
   entrypoint: bash
+  secretEnv: [CANARY]
   args: [-ceu, 'bash payload.sh']
 options:
   logging: CLOUD_LOGGING_ONLY
